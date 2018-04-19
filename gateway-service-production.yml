@@ -6,7 +6,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
-    eurekaServerConnectTimeoutSeconds: 10
+#    eurekaServerConnectTimeoutSeconds: 10
   instance:
     preferIpAddress: true
 
