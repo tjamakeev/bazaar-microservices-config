@@ -1,14 +1,10 @@
 ribbon:
   eureka:
     enabled: true
-
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
-  instance:
-    preferIpAddress: true
-
+    register-with-eureka: false
+    fetch-registry: false
 logging:
     level:
         root: INFO

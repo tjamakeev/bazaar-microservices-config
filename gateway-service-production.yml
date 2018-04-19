@@ -11,10 +11,8 @@ eureka:
 
 zuul:
   routes:
-    product-command-side:
-      path: /commands/**
-    product-query-side:
-      path: /queries/**
+    oauth-service:
+      path: /outh/**
   debug:
     request: true
     response: true
@@ -24,4 +22,4 @@ logging:
         root: INFO
         org.springframework: INFO
         com.netflix.niws.client.http: DEBUG
-        com.soagrowers: DEBUG
+        io.subutai: DEBUG
