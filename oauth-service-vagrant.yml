@@ -1,0 +1,24 @@
+ribbon:
+  eureka:
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+#    eurekaServerConnectTimeoutSeconds: 10
+  instance:
+    preferIpAddress: true
+
+logging:
+    level:
+        root: INFO
+        org.springframework: INFO
+        com.netflix.niws.client.http: DEBUG
+        io.subutai: DEBUG
+
+spring:
+  cloud:
+    inetutils:
+      ignoredInterfaces:
+        - eth0
