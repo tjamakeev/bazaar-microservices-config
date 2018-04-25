@@ -15,7 +15,7 @@ zuul:
   routes:
 #    oauth-service:
 #      path: /outh/**
-    environment-service:
+    monitoring-service:
       path: /**
       stripPrefix: true
 #    hub-service:

@@ -12,8 +12,8 @@ eureka:
 
 zuul:
   routes:
-    oauth-service:
-      path: /outh/**
+    monitoring-service:
+      path: /**
   debug:
     request: true
     response: true
