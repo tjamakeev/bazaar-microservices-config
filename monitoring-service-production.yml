@@ -1,0 +1,17 @@
+ribbon:
+  eureka:
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+logging:
+    level:
+        root: INFO
+        org.springframework: INFO
+        com.netflix: DEBUG
+        io.subutai.bazaar: DEBUG

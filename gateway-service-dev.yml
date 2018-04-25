@@ -1,0 +1,42 @@
+ribbon:
+  eureka:
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+#    eurekaServerConnectTimeoutSeconds: 10
+  instance:
+    preferIpAddress: true
+
+zuul:
+  sslHostnameValidationEnabled: false
+  routes:
+#    oauth-service:
+#      path: /outh/**
+    environment-service:
+      path: /**
+      stripPrefix: true
+#    hub-service:
+#      path: /**
+#      stripPrefix: false
+#      url: http://localhost:8080/
+#      sensitiveHeaders: none
+#      add-host-header: true
+
+#hub-service:
+#  ribbon:
+#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+#    ListOfServers: http://localhost:8080
+#    ConnectTimeout: 1000
+#    ReadTimeout: 3000
+#    MaxTotalHttpConnections: 500
+#    MaxConnectionsPerHost: 100
+
+logging:
+    level:
+        root: INFO
+        org.springframework: INFO
+        com.netflix.niws.client.http: DEBUG
+        io.subutai.bazaar: DEBUG
