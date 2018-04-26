@@ -13,5 +13,4 @@ logging:
     level:
         root: INFO
         org.springframework: INFO
-        com.netflix: DEBUG
         io.subutai.bazaar: DEBUG

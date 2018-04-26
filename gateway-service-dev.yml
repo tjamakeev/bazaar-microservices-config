@@ -38,5 +38,5 @@ logging:
     level:
         root: INFO
         org.springframework: INFO
-        com.netflix.niws.client.http: DEBUG
+        com.netflix.niws.client.http: INFO
         io.subutai.bazaar: DEBUG
