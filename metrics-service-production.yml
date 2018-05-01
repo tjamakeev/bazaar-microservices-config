@@ -14,3 +14,18 @@ logging:
         root: INFO
         org.springframework: INFO
         io.subutai.bazaar: DEBUG
+
+
+###
+#   Message Broker Settings
+###
+
+spring:
+  application:
+    exchange: bazaar-exchange
+    queue: bazaar-queue
+
+  rabbitmq:
+    hostname: rabbit
+    username: admin
+    password: admin1

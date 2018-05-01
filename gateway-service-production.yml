@@ -12,7 +12,7 @@ eureka:
 
 zuul:
   routes:
-    monitoring-service:
+    metrics-service:
       path: /**
   debug:
     request: true
