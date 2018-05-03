@@ -1,13 +1,29 @@
+###
+#   Server Settings
+###
+server:
+  port: 9092
+
+###
+#   Ribbon Settings
+###
 ribbon:
   eureka:
     enabled: true
 
+###
+#   Discovery Settings
+###
 eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
   instance:
     preferIpAddress: true
+
+###
+#   Logging Settings
+###
 
 logging:
     level:
@@ -16,7 +32,7 @@ logging:
         io.subutai.bazaar: DEBUG
 
 ###
-#   Message Broker Settings
+#   Application Settings
 ###
 
 spring:
@@ -24,11 +40,26 @@ spring:
     exchange: bazaar-exchange
     queue: bazaar-queue
 
+###
+#   RabbitMQ Settings
+###
+
   rabbitmq:
     hostname: rabbit-server
     username: hub
     password: change_me_in_production
 
+###
+#   Cassandra Settings
+###
+
+  data:
+    cassandra:
+      contact-points: cassandra-server
+      port: 9042
+      keyspace-name: hubdata
+      username: hub
+      password: change_me_in_production
 ###
 #   Database Settings
 ###
@@ -59,7 +90,11 @@ spring:
         trace: false
         web-allow-others: false
 
+###
+#   Axon Settings
+###
 
 axon:
   distributed:
     enabled: true
+

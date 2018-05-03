@@ -1,7 +1,19 @@
+###
+#   Server Settings
+###
+server:
+  port: 9092
+
+###
+#   Ribbon Settings
+###
 ribbon:
   eureka:
     enabled: true
 
+###
+#   Discovery Settings
+###
 eureka:
   client:
     serviceUrl:
@@ -9,15 +21,18 @@ eureka:
   instance:
     preferIpAddress: true
 
+###
+#   Logging Settings
+###
+
 logging:
     level:
         root: INFO
         org.springframework: INFO
         io.subutai.bazaar: DEBUG
 
-
 ###
-#   Message Broker Settings
+#   Application Settings
 ###
 
 spring:
@@ -25,7 +40,61 @@ spring:
     exchange: bazaar-exchange
     queue: bazaar-queue
 
+###
+#   RabbitMQ Settings
+###
+
   rabbitmq:
     hostname: rabbit-server
     username: hub
     password: change_me_in_production
+
+###
+#   Cassandra Settings
+###
+
+  data:
+    cassandra:
+      contact-points: cassandra-server
+      port: 9042
+      keyspace-name: hubdata
+      username: hub
+      password: change_me_in_production
+###
+#   Database Settings
+###
+  datasource:
+    url: jdbc:h2:mem:hub-app;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+
+###
+#   H2 Settings
+###
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: false
+
+###
+#   Axon Settings
+###
+
+axon:
+  distributed:
+    enabled: true
+
