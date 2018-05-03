@@ -25,9 +25,9 @@ spring:
     queue: bazaar-queue
 
   rabbitmq:
-    hostname: rabbit
-    username: admin
-    password: admin1
+    hostname: rabbit-server
+    username: hub
+    password: change_me_in_production
 
 ###
 #   Database Settings
