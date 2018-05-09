@@ -1,10 +1,4 @@
 ###
-#   Server Settings
-###
-server:
-  port: 9092
-
-###
 #   Ribbon Settings
 ###
 ribbon:
@@ -45,7 +39,7 @@ spring:
 ###
 
   rabbitmq:
-    hostname: rabbit-server
+    hostname: rabbitmq-server
     username: hub
     password: change_me_in_production
 
