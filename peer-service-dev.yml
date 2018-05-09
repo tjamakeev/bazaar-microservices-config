@@ -2,7 +2,7 @@
 #   Server Settings
 ###
 server:
-  port: 9092
+  port: 9093
 
 ###
 #   Ribbon Settings
@@ -64,11 +64,11 @@ spring:
 #   Database Settings
 ###
 #  datasource:
-#    url: jdbc:h2:mem;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-#    platform: h2
+#    url:  jdbc:hsqldb:mem:peers;sql.syntax_ora=true
+#    platform: hsqldb
 #    username: sa
 #    password:
-#    driverClassName: org.h2.Driver
+#    driverClassName: org.hsqldb.jdbc.JDBCDriver
 #  jpa:
 #    database-platform: org.hibernate.dialect.H2Dialect
 #    hibernate:
@@ -79,26 +79,16 @@ spring:
 #        use_sql_comments: true
 #        format_sql: true
 
-
-#    hibernate:
-#      ddl-auto: validate
-#    database-platform: org.hibernate.dialect.MySQLDialect
-#  datasource:
-#    url: jdbc:mysql://${db.host}:3306/hub
-#    username: ${db.username}
-#    password: ${db.password}
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-
 ###
 #   H2 Settings
 ###
-  h2:
-    console:
-      enabled: true
-      path: /console
-      settings:
-        trace: false
-        web-allow-others: false
+#  h2:
+#    console:
+#      enabled: true
+#      path: /console
+#      settings:
+#        trace: false
+#        web-allow-others: false
 
 ###
 #   Axon Settings
